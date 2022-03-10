@@ -1,24 +1,3 @@
-// import React from 'react';
-// // import logo from './logo.svg';
-// import './App.css';
-// import About from './components/About';
-// import Nav from './components/Nav';
-// import Gallery from './components/Gallery';
-
-// function App() {
-//   return (
-//     <div>
-//       <Nav></Nav>
-//       <main>
-//         <Gallery></Gallery>
-//         <About></About>
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 
 import React, { useState } from 'react';
 import Nav from './components/Nav';
@@ -37,6 +16,7 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  console.log(currentCategory)
 
   return (
     <div>
@@ -47,7 +27,8 @@ function App() {
       ></Nav>
       <main>
         <div>
-          <Gallery></Gallery>
+          <Gallery currentCategory={currentCategory}>
+          </Gallery>
           <About></About>
         </div>
       </main>
